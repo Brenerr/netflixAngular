@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  menuOpened = false;
+
   listTitles = [
     {
       trailer: '/assets/videos/trailer_guardioes_da_galaxia_1080p.mp4',
@@ -45,4 +47,12 @@ export class AppComponent {
       categories: ['Épico', 'Filme de fantasia', 'Viagem no espaço']
     }
   ];
+
+  setMenuState(state: boolean) {
+    this.menuOpened = state;
+  }
+
+  closeMenu() {
+    this.menuOpened = false;
+  }
 }
